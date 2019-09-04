@@ -1,15 +1,11 @@
 #!/usr/bin/env bash
 
-directory=$2
-
-number=$1
-
 start_directory=$(pwd)
 
-cd $directory
+cd $2
 
 tar xf $start_directory/NthPrime.tgz
 
-gcc -o $directory/NthPrime/NthPrime $directory/NthPrime/main.c $directory/NthPrime/nth_prime.c
+gcc -o $2/NthPrime/NthPrime $2/NthPrime/main.c $2/NthPrime/nth_prime.c
 
-NthPrime/NthPrime $number
+NthPrime/NthPrime $1
